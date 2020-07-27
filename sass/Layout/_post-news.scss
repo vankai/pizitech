@@ -1,0 +1,54 @@
+.content-news {
+  padding: 3rem 2rem 0;
+  &__date-news {
+    font-size: 1.5rem;
+    color: $color-black-light;
+    margin-bottom: 3rem;
+  }
+  &__main-news {
+    width: 100%;
+    @include clearFix;
+  }
+  &__image-news {
+    width: 50%;
+    margin-right: 20px;
+    float: left;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+    @include respond(phone) {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__text-news {
+    width: 100%;
+    p {
+      a {
+        color: $color-hover;
+        font-size: 1.6rem;
+        text-decoration: underline;
+        font-weight: 100;
+        &:hover {
+          color: $color-hover;
+        }
+        &:active {
+          color: $color-active;
+        }
+      }
+    }
+  }
+
+  &__line-hr {
+    border-top: 0.7px solid $color-white-light;
+    margin-bottom: 2rem;
+    margin-top: 2.5rem;
+    overflow: hidden;
+  }
+}

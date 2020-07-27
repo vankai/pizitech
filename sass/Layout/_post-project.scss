@@ -1,0 +1,175 @@
+.post-slider {
+  margin-bottom: 50px;
+  animation: fadein-content 3s ease-out 0s 1 normal forwards;
+  transition: all 0.2s ease-out;
+}
+.slider-post {
+  .slick-slide {
+    opacity: 0.3;
+    .slick-dots {
+      bottom: -45px;
+      li {
+        button {
+          &:before {
+            font-size: 6px !important;
+          }
+        }
+      }
+    }
+  }
+  .slick-current {
+    opacity: 1;
+  }
+  .slider-single {
+    .item {
+      height: 75vh;
+      &:focus {
+        outline: none;
+      }
+      img {
+        height: inherit;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        &:focus,
+        &:active {
+          outline: none;
+        }
+      }
+    }
+  }
+}
+
+.details-post {
+  padding-top: 3rem;
+  margin-bottom: 10rem;
+  width: 100%;
+  @include clearFix;
+
+  &__infor {
+    width: 38%;
+    float: left;
+    @include respond(phone) {
+      width: 100%;
+      float: right;
+      margin-top: 3rem;
+    }
+  }
+
+  &__article {
+    width: 38%;
+    float: left;
+
+    @include respond(phone) {
+      width: 100%;
+      text-align: left;
+    }
+  }
+  &__title-post {
+    font-size: 3.5rem;
+    color: $color-black-light;
+    margin-bottom: 4rem;
+    margin-top: 0;
+    text-align: right;
+    display: block;
+    padding-right: 15%;
+    padding-left: 5rem;
+
+    @include respond(phone) {
+      text-align: left;
+      padding: 0em;
+    }
+  }
+
+  &__component {
+    margin-left: 5rem;
+    padding: 30px 0;
+    text-align: right;
+    margin-right: 15%;
+    border-top: 1px solid $color-black;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    div {
+      margin-bottom: 2rem;
+      strong {
+        font-style: italic;
+        font-weight: 700;
+        color: $color-primary;
+        font-size: 1.3rem;
+        display: block;
+      }
+      a {
+        color: $color-hover-second;
+        display: block;
+        &:active {
+          color: $color-active-light;
+        }
+      }
+    }
+    @include respond(phone) {
+      margin: 0;
+    }
+  }
+
+  &__content {
+    width: 62%;
+    padding-top: 20px;
+    float: right;
+    @include respond(phone) {
+      width: 100%;
+      padding: 0;
+    }
+  }
+}
+
+.paragraph {
+  max-width: 640px;
+  &__caption {
+    margin-bottom: 3rem;
+  }
+  &__caption,
+  &__caption-1,
+  &__caption-2 {
+    font-style: italic;
+    font-size: 1.6rem;
+    color: $color-black-light;
+    font-weight: 700;
+  }
+  &__caption-1,
+  &__caption-2 {
+    margin-left: 5rem;
+    // word-spacing: 0.5rem;
+    text-align: justify;
+  }
+  &__text {
+    font-size: 1.6rem;
+    text-align: justify;
+    span {
+      display: block;
+      margin-bottom: 2rem;
+    }
+  }
+  &__hollow {
+    line-height: 4rem;
+    display: block;
+    @include respond(phone) {
+      display: none;
+    }
+  }
+}
+.thumnail {
+  &__thumnail-item {
+    height: 80px;
+    width: auto;
+    display: inline-block;
+    background-color: $color-black;
+    margin-bottom: 2px;
+    img {
+      height: inherit;
+      width: inherit;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}

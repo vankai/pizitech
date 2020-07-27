@@ -1,0 +1,163 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 99;
+  background-color: $color-black !important;
+  padding: 0;
+  .navbar-brand {
+    padding: 1rem 0 1rem 3.2rem;
+    width: 25%;
+    @include respond(phone) {
+      width: 35%;
+    }
+    img {
+      width: 100%;
+      height: 40px;
+      object-fit: contain;
+      object-position: left;
+      line-height: 1rem;
+    }
+    &:hover {
+      background: #333;
+    }
+  }
+}
+
+.navbar-collapse {
+  .navbar-nav {
+    width: auto;
+    margin-left: 0 !important;
+    .nav-item {
+      .nav-link {
+        color: $color-white;
+        font-family: $font_gothic;
+        font-size: 1.4rem;
+        letter-spacing: 0.15rem;
+        text-transform: uppercase;
+        padding: 20px 23px;
+        display: inline-block;
+
+        &:hover,
+        &:focus,
+        &:active {
+          color: $color-black;
+          background-color: $color-white;
+        }
+
+        @include respond(phone) {
+          display: block;
+          padding: 15px 23px;
+        }
+        @include respond(tab-port) {
+          display: block;
+        }
+      }
+
+      .icon-social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 0.6rem;
+        padding-right: 0.6rem;
+        font-size: 1.9rem;
+        transition: all 0s;
+        &:nth-child(1) i {
+          font-size: 1.8rem;
+          padding-bottom: 1px;
+        }
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: transparent !important;
+          opacity: 0.6;
+          color: $color-white;
+        }
+        span {
+          text-transform: uppercase;
+          color: $color-white;
+          font-size: 1.4rem;
+          display: none !important;
+          letter-spacing: 0.2rem;
+
+          @include respond(phone) {
+            display: inline-block !important;
+          }
+        }
+
+        @include respond(phone) {
+          display: block;
+          padding: 15px 23px;
+        }
+      }
+    }
+    .flex-item {
+      display: flex;
+
+      @include respond(phone) {
+        display: block;
+      }
+    }
+  }
+}
+
+/*code to change background color*/
+.navbar {
+  ul {
+    .active {
+      a {
+        color: $color-black !important;
+        background-color: $color-white !important;
+      }
+    }
+  }
+}
+
+.navbar-toggler-icon {
+  background-image: none !important;
+  width: auto;
+  height: auto;
+  padding: 0.5rem;
+  transition: all 1s ease-out;
+  &::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f0c9";
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: 900;
+    font-size: 2.5rem;
+    color: $color-white;
+  }
+}
+.navbar-toggler {
+  margin-right: 2rem;
+  border: none !important;
+  &:focus {
+    border: none !important;
+    outline: none;
+  }
+}
+.toggler-change.change-icon .navbar-toggler-icon::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f00d";
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: 900;
+  font-size: 2.7rem;
+  color: $color-white;
+}
+.bg-header-single {
+  // background-color: rgba($color: $color-black, $alpha: 0.8) !important;
+  opacity: 0.8;
+}
+.navbar-nav {
+  li.current-post-ancestor {
+    a,
+    a:hover {
+      background-color: $color-white !important;
+      color: $color-black !important;
+    }
+  }
+}
